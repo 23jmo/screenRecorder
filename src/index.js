@@ -1,3 +1,17 @@
+// Suppress excessive logging
+process.env.ELECTRON_ENABLE_LOGGING = false;
+process.env.ELECTRON_ENABLE_STACK_DUMPING = false;
+
+// If you still want to see errors, but not device polling logs
+if (process.env.NODE_ENV !== 'development') {
+  console.log = () => {};
+  console.info = () => {};
+  console.debug = () => {};
+  // Keep error and warn for debugging
+  // console.error = () => {};
+  // console.warn = () => {};
+}
+
 const { app, BrowserWindow } = require('electron');
 require('@electron/remote/main').initialize();
 const path = require('path');
@@ -25,7 +39,7 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished

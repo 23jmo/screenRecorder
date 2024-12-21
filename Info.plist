@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>NSCameraUsageDescription</key>
+    <string>This app needs access to camera to record video.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>This app needs access to microphone to record audio.</string>
+    <key>NSScreenCaptureUsageDescription</key>
+    <string>This app needs screen capture access to record your screen.</string>
+</dict>
+</plist> 
